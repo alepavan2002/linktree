@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mi Sitio Web</title>
+  <link rel="icon" href="iconos/Logo_River_Plate.png" type="image/x-icon" />
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet" />
+  <style>
+    body {
+      font-family: 'Poppins', sans-serif;
+      margin: 0;
+      padding-bottom: 60px;
+      background-color: white;
+      color: black;
+      text-align: center;
+    }
+    nav {
+      background-color: red;
+      height: 50px;
+      line-height: 50px;
+    }
+    nav ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+    }
+    nav ul li {
+      display: inline;
+      margin: 0 15px;
+    }
+    nav ul li a {
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    section {
+      display: none;
+      padding: 60px 20px;
+    }
+    #inicio:target,
+    #tabla:target,
+    #playlist:target,
+    #trivia:target {
+      display: block;
+    }
+    body:not(:has(:target)) #inicio {
+      display: block;
+    }
+    .playlist-container {
+      display: flex;
+      justify-content: center;
+      align-items: flex-start;
+    }
+    .playlist-menu {
+  width: 260px;
+  background: #fff;
+  padding: 30px 25px;
+  text-align: left;
+  border-radius: 18px;
+  box-shadow: 0 8px 30px rgba(0,0,0,0.08);
+  border-left: 5px solid #d91b1b;
+  transition: all 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  backdrop-filter: blur(8px);
+}
+    .playlist-menu button {
+  background: linear-gradient(90deg, #f0f0f0, #ffffff);
+  border: none;
+  color: #2d2d2d;
+  font-weight: 600;
+  cursor: pointer;
+  text-align: left;
+  font-size: 1em;
+  padding: 12px 15px;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  transition: transform 0.2s ease, background 0.3s ease;
+}
+    .playlist-menu button:hover {
+  transform: translateX(5px);
+  background: #ffeaea;
+  color: #b30000;
+}
+    .video-frame {
+      flex-grow: 1;
+      padding: 20px;
+    }
+    #playlist h2 {
+      font-family: 'Orbitron', sans-serif;
+      font-size: 2em;
+      text-align: center;
+    }
+    #videoTitulo {
+      font-family: 'Orbitron', sans-serif;
+      font-size: 1.1em;
+    }
+    iframe {
+      width: 560px;
+      height: 315px;
+      border: none;
+    }
+    .opciones {
+      display: flex;
+      justify-content: center;
+      gap: 50px;
+      margin-top: 30px;
+    }
+    .opciones img {
+      width: 150px;
+      cursor: pointer;
+    }
+    .mensaje-trivia {
+      margin-top: 20px;
+      font-weight: bold;
+    }
+    .trivia-pregunta {
+      display: none;
+    }
+    table {
+      margin: auto;
+      border-collapse: collapse;
+      border: 2px solid red;
+    }
+    th {
+      background-color: red;
+      color: white;
+      font-size: 1.2em;
+    }
+    td {
+      padding: 10px;
+    }
+    footer {
+      background-color: #f0f0f0;
+      padding: 10px;
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      text-align: center;
+      font-size: 0.9em;
+      color: #555;
+    }
+  </style>
+</head>
+<body>
+  <nav>
+    <ul>
+      <li><a href="#inicio">Inicio</a></li>
+      <li><a href="#tabla">Escudos River</a></li>
+      <li><a href="#playlist">Playlist</a></li>
+      <li><a href="#trivia">Trivia</a></li>
+    </ul>
+  </nav>
+
+  <section id="inicio" style="position: relative; overflow: hidden; background: #ffffff url('imagenes/monumental.png') no-repeat center center / cover;">
+    <div style="position: relative; z-index: 1; background-color: rgba(255, 255, 255, 0.88); padding: 40px; max-width: 600px; margin: 0 auto; border-radius: 20px; box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);">
+    <h1>Mi nombre es Alessandro Pavan</h1>
+    <h2>Tengo 22 años, estudio Marketing.</h2>
+    <img src="imagenes/lebron 1.png" alt="FOTO DE LEBRON" width="180">
+    <blockquote style="margin-top: 30px;">
+      “Que la gente crea porque tiene con qué creer” – Marcelo Daniel Gallardo.
+    </blockquote>
+    </div>
+  </section>
+
+  <section id="tabla">
+    <h1>Escudos de River a lo largo del tiempo</h1>
+    <table>
+      <tr>
+        <th colspan="4">ESCUDOS DE RIVER</th>
+      </tr>
+      <tr>
+        <td><img src="imagenes/1-3.png" width="100"></td>
+        <td><img src="imagenes/4-3.png" width="100"></td>
+        <td><img src="imagenes/11.png" width="100"></td>
+        <td><img src="imagenes/Logo_River_Plate (1).png" width="75"></td>
+      </tr>
+      <tr>
+        <td>1918</td>
+        <td>1932</td>
+        <td>1950</td>
+        <td>2022</td>
+      </tr>
+      <tr>
+        <td>ESCUDO UTILIZADO EN 1918</td>
+        <td>ESCUDO UTILIZADO EN 1932</td>
+        <td>ESCUDO UTILIZADO EN 1950</td>
+        <td>ESCUDO UTILIZADO EN 2022</td>
+      </tr>
+    </table>
+  </section>
+
+  <section id="playlist">
+    <h2>Videos favoritos</h2>
+    <div class="playlist-container">
+      <div class="playlist-menu">
+        <button onclick="cambiarVideo('7ZPAe4uFM4U', 'La historia de Lionel Messi')">La historia de Messi</button>
+        <button onclick="cambiarVideo('keCwRdbwNQY', 'Steve Jobs y el Marketing')">Steve Jobs</button>
+        <button onclick="cambiarVideo('aDwC_m8wUs0', 'La historia de LeBron James')">LeBron James</button>
+      </div>
+      <div class="video-frame">
+        <iframe id="videoActual" src="https://www.youtube.com/embed/7ZPAe4uFM4U" allowfullscreen></iframe>
+        <p id="videoTitulo">La historia de Lionel Messi</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="trivia">
+  <h2>Trivia</h2>
+  <div id="trivia1" class="trivia-pregunta" style="display:block">
+    <p><strong>¿Quién es mejor?</strong></p>
+    <div class="opciones">
+      <img src="imagenes/lebron.png" alt="LeBron" onclick="mostrarRespuesta(true, 'trivia1')">
+      <img src="imagenes/jordan.png" alt="Jordan" onclick="mostrarRespuesta(false, 'trivia1')">
+    </div>
+    <p id="mensajeTrivia1" class="mensaje-trivia"></p>
+  </div>
+  <div id="trivia2" class="trivia-pregunta">
+    <p><strong>¿Quién es mejor?</strong></p>
+    <div class="opciones">
+      <img src="imagenes/messi.png" alt="Messi" style="width: 400px; height: auto; object-fit: contain; background-color: white; padding: 5px; border-radius: 10px;" onclick="mostrarRespuesta(true, 'trivia2')">
+      <img src="imagenes/cristiano.png" alt="Cristiano" onclick="mostrarRespuesta(false, 'trivia2')">
+    </div>
+    <p id="mensajeTrivia2" class="mensaje-trivia"></p>
+  </div>
+  <div id="trivia3" class="trivia-pregunta">
+    <p><strong>¿De qué club soy hincha?</strong></p>
+    <div class="opciones">
+      <img src="imagenes/river1.png" alt="River 1" onclick="mostrarRespuesta(true, 'trivia3')">
+      <img src="imagenes/river2.png" alt="River 2" onclick="mostrarRespuesta(true, 'trivia3')">
+    </div>
+    <p id="mensajeTrivia3" class="mensaje-trivia"></p>
+  </div>
+  <div id="finTrivia" class="trivia-pregunta">
+    <h3>¡Fin de la trivia!</h3>
+  </div>
+</section>
+
+  <footer>
+    Hecho por Alessandro Pavan – 2025
+  </footer>
+
+  <script>
+    function cambiarVideo(codigo, titulo) {
+      const video = document.getElementById("videoActual");
+      const texto = document.getElementById("videoTitulo");
+      video.src = `https://www.youtube.com/embed/${codigo}`;
+      texto.textContent = titulo;
+    }
+    function mostrarRespuesta(esCorrecta, idTrivia) {
+    const numero = idTrivia.replace('trivia', '');
+    const mensaje = document.getElementById("mensajeTrivia" + numero);
+    mensaje.textContent = esCorrecta ? "¡Correcto!" : "Incorrecto :(";
+    mensaje.style.color = esCorrecta ? "green" : "red";
+    setTimeout(() => {
+      document.getElementById(idTrivia).style.display = 'none';
+      const siguiente = document.getElementById('trivia' + (parseInt(numero) + 1));
+      if (siguiente) {
+        siguiente.style.display = 'block';
+      } else {
+        document.getElementById('finTrivia').style.display = 'block';
+      }
+    }, 1500);
+  }
+</script>
+</body>
+</html>

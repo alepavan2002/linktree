@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Lista de Tareas – Alessandro Pavan</title>
+  <link rel="stylesheet" href="estilos.css">
+  <style>
+    .tareas-container {
+      max-width: 700px;
+      margin: 0 auto;
+      background: rgba(255, 255, 255, 0.85);
+      padding: 2rem;
+      border-radius: 1rem;
+      box-shadow: 0 0 10px rgba(0,0,0,0.3);
+    }
+
+    .tareas-container h2 {
+      text-align: center;
+      margin-bottom: 1.5rem;
+    }
+
+    .tareas-container input[type="text"] {
+      width: 70%;
+      padding: 0.5rem;
+      border: 1px solid #ccc;
+      border-radius: 0.5rem;
+    }
+
+    .tareas-container button {
+      padding: 0.5rem 1rem;
+      background-color: #a00;
+      color: white;
+      border: none;
+      border-radius: 0.5rem;
+      cursor: pointer;
+    }
+
+    ul.tarea-lista {
+      margin-top: 1.5rem;
+      padding: 0;
+      list-style: none;
+    }
+
+    ul.tarea-lista li {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0.8rem 1rem;
+      margin-bottom: 0.5rem;
+      background: #fff;
+      border-radius: 0.5rem;
+      box-shadow: 0 0 4px rgba(0,0,0,0.2);
+    }
+
+    ul.tarea-lista li.completado {
+      text-decoration: line-through;
+      color: gray;
+      background-color: #eee;
+    }
+
+    .tarea-lista button {
+      margin-left: 1rem;
+      background-color: #555;
+    }
+
+    .tarea-lista button:hover {
+      background-color: #222;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Alessandro Pavan</h1>
+    <nav>
+      <a href="index.html">Inicio</a>
+      <a href="sobre-mi.html">Sobre mí</a>
+      <a href="cv.html">CV</a>
+      <a href="calculadora.html">Calculadora</a>
+      <a href="galeria.html">Galería</a>
+      <a href="tareas.html" class="activo">Tareas</a>
+      <a href="contacto.html">Contacto</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="tareas-container">
+      <h2>Mis Tareas</h2>
+      <div>
+        <input type="text" id="nuevaTarea" placeholder="Escribí una nueva tarea..." />
+        <button onclick="agregarTarea()">Agregar</button>
+      </div>
+      <ul class="tarea-lista" id="listaTareas"></ul>
+    </section>
+  </main>
+
+  <footer>
+    <p>© 2025 Alessandro Pavan</p>
+  </footer>
+
+  <script>
+    function agregarTarea() {
+      const input = document.getElementById('nuevaTarea');
+      const texto = input.value.trim();
+      if (texto === '') return;
+
+      const li = document.createElement('li');
+      li.innerHTML = `
+        <span>${texto}</span>
+        <div>
+          <button onclick="completarTarea(this)">✔</button>
+          <button onclick="eliminarTarea(this)">🗑</button>
+        </div>
+      `;
+      document.getElementById('listaTareas').appendChild(li);
+      input.value = '';
+    }
+
+    function completarTarea(btn) {
+      btn.closest('li').classList.toggle('completado');
+    }
+
+    function eliminarTarea(btn) {
+      btn.closest('li').remove();
+    }
+  </script>
+</body>
+</html>

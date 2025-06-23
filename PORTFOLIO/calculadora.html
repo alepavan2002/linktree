@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Calculadora</title>
+  <link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+  <header>
+    <h1>Alessandro Pavan | Portfolio</h1>
+    <nav>
+      <a href="index.html">Inicio</a>
+      <a href="sobre-mi.html">Sobre mí</a>
+      <a href="cv.html">CV</a>
+      <a href="calculadora.html">Calculadora</a>
+      <a href="galeria.html">Galería</a>
+      <a href="tareas.html">Tareas</a>
+      <a href="contacto.html">Contacto</a>
+    </nav>
+  </header>
+
+  <main>
+    <section>
+      <h2>Calculadora</h2>
+      <div class="calculadora">
+        <input type="text" id="resultado" readonly>
+        <button class="btn-op" onclick="borrarTodo()">C</button>
+        <button class="btn-op" onclick="borrarUltimo()">CE</button>
+        <button class="btn-op" onclick="agregar('/')">/</button>
+        <button class="btn-op" onclick="agregar('*')">*</button>
+
+        <button onclick="agregar('7')">7</button>
+        <button onclick="agregar('8')">8</button>
+        <button onclick="agregar('9')">9</button>
+        <button class="btn-op" onclick="agregar('-')">-</button>
+
+        <button onclick="agregar('4')">4</button>
+        <button onclick="agregar('5')">5</button>
+        <button onclick="agregar('6')">6</button>
+        <button class="btn-op" onclick="agregar('+')">+</button>
+
+        <button onclick="agregar('1')">1</button>
+        <button onclick="agregar('2')">2</button>
+        <button onclick="agregar('3')">3</button>
+        <button class="btn-eq" onclick="calcular()">=</button>
+
+        <button style="grid-column: span 2;" onclick="agregar('0')">0</button>
+        <button onclick="agregar('.')">.</button>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>© 2025 Alessandro Pavan</p>
+  </footer>
+
+  <script>
+    function agregar(valor) {
+      document.getElementById('resultado').value += valor;
+    }
+
+    function borrarTodo() {
+      document.getElementById('resultado').value = '';
+    }
+
+    function borrarUltimo() {
+      const input = document.getElementById('resultado');
+      input.value = input.value.slice(0, -1);
+    }
+
+    function calcular() {
+      const resultado = document.getElementById('resultado');
+      try {
+        resultado.value = eval(resultado.value);
+      } catch {
+        resultado.value = 'Error';
+      }
+    }
+  </script>
+</body>
+</html>

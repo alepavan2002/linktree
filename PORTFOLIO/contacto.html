@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Contacto – Alessandro Pavan</title>
+<link rel="stylesheet" href="estilos.css">
+
+  <style>
+    .formulario-container {
+      max-width: 600px;
+      margin: 3rem auto;
+      background-color: rgba(255, 255, 255, 0.9);
+      padding: 2rem;
+      border-radius: 1.5rem;
+      box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+    }
+
+    .formulario-container h2 {
+      text-align: center;
+      margin-bottom: 1.5rem;
+    }
+
+    .formulario-container form {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .formulario-container input,
+    .formulario-container textarea {
+      padding: 0.8rem;
+      margin-bottom: 1rem;
+      border: 1px solid #ccc;
+      border-radius: 0.5rem;
+      font-size: 1rem;
+    }
+
+    .formulario-container button {
+      padding: 0.8rem;
+      background-color: #a00;
+      color: #fff;
+      border: none;
+      border-radius: 0.5rem;
+      font-weight: bold;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    .formulario-container button:hover {
+      background-color: #800000;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Alessandro Pavan</h1>
+    <nav>
+      <a href="index.html">Inicio</a>
+      <a href="sobre-mi.html">Sobre mí</a>
+      <a href="cv.html">CV</a>
+      <a href="calculadora.html">Calculadora</a>
+      <a href="galeria.html">Galería</a>
+      <a href="tareas.html">Tareas</a>
+      <a href="contacto.html" class="activo">Contacto</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="formulario-container">
+      <h2>Contacto</h2>
+      <form action="mailto:alepavan2002@gmail.com" method="POST" enctype="text/plain">
+        <input type="text" name="nombre" placeholder="Tu nombre" required>
+        <input type="email" name="correo" placeholder="Tu correo" required>
+        <textarea name="mensaje" rows="5" placeholder="Tu mensaje" required></textarea>
+        <button type="submit">Enviar</button>
+      </form>
+    </section>
+  </main>
+
+  <footer>
+    <p>© 2025 Alessandro Pavan</p>
+  </footer>
+</body>
+</html>

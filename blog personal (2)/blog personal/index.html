@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Alessandro Pavan | Blog</title>
+  <link rel="stylesheet" href="estilos.css">
+  <link rel="icon" type="image/png" href="imagenes/icono.png">
+  <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;600;800&display=swap" rel="stylesheet">
+</head>
+<body class="inicio-body">
+
+  <header>
+    <h1>Alessandro Pavan | <span>Blog</span></h1>
+    <nav>
+      <ul class="menu">
+        <li><a href="index.html">Inicio</a></li>
+        <li><a href="articulos.html">Artículos</a></li>
+        <li><a href="#contacto-title">Contacto</a></li> <!-- CAMBIO REALIZADO -->
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section class="bienvenida">
+      <h2>Bienvenido a mi blog personal</h2>
+      <p>En este espacio comparto mis opiniones y análisis sobre películas que me impactaron a lo largo de mi vida.</p>
+    </section>
+
+    <section class="zona-articulos">
+      <h2 class="titulo-seccion">Artículos Recientes</h2>
+
+      <div class="contenedor-principal">
+        <div class="contenedor-articulos">
+          <!-- 5 tarjetas -->
+          <a href="peliculas/avatar.html" class="tarjeta">
+            <article>
+              <img src="imagenes/articulo1.jpg" alt="Avatar">
+              <h3>Reseña: Avatar (2009)</h3>
+              <p><small>Fecha: 25 de mayo de 2025</small></p>
+              <p>Una exploración del conflicto entre tecnología y naturaleza en Pandora.</p>
+              <button>Leer más</button>
+            </article>
+          </a>
+
+          <a href="peliculas/avatar2.html" class="tarjeta">
+            <article>
+              <img src="imagenes/articulo2.jpg" alt="Avatar 2">
+              <h3>Reseña: Avatar 2 (2022)</h3>
+              <p><small>Fecha: 26 de mayo de 2025</small></p>
+              <p>La familia Sully enfrenta nuevas amenazas en las profundidades de Pandora.</p>
+              <button>Leer más</button>
+            </article>
+          </a>
+
+          <a href="peliculas/interestelar.html" class="tarjeta">
+            <article>
+              <img src="imagenes/articulo3.jpg" alt="Interestelar">
+              <h3>Reseña: Interestelar (2014)</h3>
+              <p><small>Fecha: 27 de mayo de 2025</small></p>
+              <p>Un viaje a través del espacio y el tiempo en busca de un nuevo hogar para la humanidad.</p>
+              <button>Leer más</button>
+            </article>
+          </a>
+
+          <a href="peliculas/simios.html" class="tarjeta">
+            <article>
+              <img src="imagenes/articulo4.jpg" alt="Simios">
+              <h3>Reseña: El planeta de los simios (2014)</h3>
+              <p><small>Fecha: 28 de mayo de 2025</small></p>
+              <p>La lucha por la coexistencia entre humanos y simios inteligentes.</p>
+              <button>Leer más</button>
+            </article>
+          </a>
+
+          <a href="peliculas/bond.html" class="tarjeta">
+            <article>
+              <img src="imagenes/articulo5.jpg" alt="Bond">
+              <h3>Reseña: Casino Royale (2006)</h3>
+              <p><small>Fecha: 29 de mayo de 2025</small></p>
+              <p>James Bond se enfrenta a un banquero de terroristas en una intensa partida de póker.</p>
+              <button>Leer más</button>
+            </article>
+          </a>
+        </div>
+      </div>
+
+      <!-- TARJETA EXTRA ALARGADA -->
+      <div class="tarjeta-alta">
+        <img src="imagenes/mision.jpg" alt="Misión Imposible">
+        <div class="contenido">
+          <h3>Última película que vi</h3>
+          <p><strong>Misión: Imposible – La Sentencia Final (2025)</strong></p>
+          <p><strong>Adrenalina, suspenso y escenas de riesgo:</strong> una experiencia intensa con <strong>Tom Cruise</strong> brillando al máximo.</p>
+        </div>
+      </div>
+
+    </section>
+
+    <!-- FORMULARIO DE CONTACTO -->
+    <section id="contacto" class="formulario-contacto">
+      <h2 id="contacto-title">Contacto</h2> <!-- NUEVO ID AGREGADO -->
+      <form>
+        <label for="nombre">Nombre:</label>
+        <input type="text" id="nombre" name="nombre" required>
+
+        <label for="email">Correo electrónico:</label>
+        <input type="email" id="email" name="email" required>
+
+        <label for="mensaje">Mensaje:</label>
+        <textarea id="mensaje" name="mensaje" required></textarea>
+
+        <button type="submit">Enviar</button>
+      </form>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Alessandro Pavan. Todos los derechos reservados.</p>
+    <p>Seguime en <a href="#">Instagram</a> | <a href="#">LinkedIn</a></p>
+  </footer>
+
+</body>
+</html>

@@ -1,0 +1,340 @@
+/* RESET Y BASE */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Raleway', sans-serif;
+  background-color: #f5f5f5;
+  color: #222;
+  line-height: 1.6;
+}
+
+/* --- MENÚ FIJO --- */
+header {
+  background-color: #b00000;
+  color: white;
+  padding: 20px 0;
+  text-align: center;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+header h1 {
+  font-size: 1.8rem;
+  font-weight: 800;
+  letter-spacing: 1px;
+}
+
+header h1 span {
+  color: #ffd700;
+}
+
+.menu {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  padding: 10px 0;
+}
+
+.menu a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+.menu a:hover {
+  color: #ffd700;
+}
+
+/* BIENVENIDA */
+.bienvenida {
+  text-align: center;
+  padding: 30px 20px;
+}
+
+.bienvenida h2 {
+  color: #b00000;
+  font-size: 2rem;
+  margin-bottom: 10px;
+  text-shadow: 1px 1px 1px #999;
+}
+
+.zona-articulos {
+  padding: 40px 20px;
+  text-align: center;
+}
+
+.titulo-seccion {
+  font-size: 1.6rem;
+  margin-bottom: 30px;
+  color: #b00000;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.contenedor-articulos {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+}
+
+/* TARJETAS ANTIGUAS (.tarjeta) */
+.tarjeta {
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  text-decoration: none;
+  color: inherit;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  width: 300px;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.tarjeta:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+.tarjeta img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+}
+
+.tarjeta article {
+  padding: 20px;
+}
+
+.tarjeta h3 {
+  color: #b00000;
+  font-size: 1.1rem;
+}
+
+.tarjeta button {
+  background-color: #b00000;
+  color: white;
+  padding: 8px;
+  border: none;
+  border-radius: 4px;
+  font-weight: bold;
+  margin-top: 10px;
+  cursor: pointer;
+  width: 100%;
+}
+
+.tarjeta button:hover {
+  background-color: #8a0000;
+}
+
+/* TARJETA ALARGADA (Última película que vi) */
+.tarjeta-alta {
+  background-color: white;
+  width: 90%;
+  max-width: 800px;
+  margin: 40px auto;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  border-radius: 12px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.tarjeta-alta img {
+  width: 100%;
+  max-height: 350px;
+  object-fit: cover;
+}
+
+.tarjeta-alta .contenido {
+  padding: 20px;
+  text-align: left;
+}
+
+.tarjeta-alta h3 {
+  color: #b00000;
+  font-size: 1.4rem;
+  margin-bottom: 10px;
+}
+
+/* CONTACTO */
+.formulario-contacto {
+  padding: 60px 20px;
+  text-align: center;
+}
+
+form {
+  max-width: 500px;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+input, textarea {
+  padding: 10px;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+}
+
+button[type="submit"] {
+  background-color: #b00000;
+  color: white;
+  padding: 10px;
+  border: none;
+  border-radius: 6px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button[type="submit"]:hover {
+  background-color: #8a0000;
+}
+
+footer {
+  background-color: #222;
+  color: white;
+  text-align: center;
+  padding: 20px;
+  margin-top: 60px;
+}
+
+/* --- GRID PARA ARTÍCULOS --- */
+.grid-articulos {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 20px;
+  padding: 20px;
+  justify-content: center;
+}
+
+/* --- TARJETA MODERNA CON EFECTOS (actual .card) --- */
+.card {
+  background-color: #fff;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  animation: fadeIn 1s ease forwards;
+  opacity: 0;
+  padding: 15px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+.card img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  border-radius: 8px;
+  margin-bottom: 10px;
+}
+
+.card h3 {
+  margin-top: 10px;
+}
+
+.card p {
+  margin: 5px 0;
+}
+
+/* BOTÓN MODERNO */
+.boton {
+  display: inline-block;
+  background-color: red;
+  color: white;
+  text-decoration: none;
+  padding: 10px 15px;
+  margin-top: 10px;
+  border-radius: 6px;
+  font-weight: bold;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.boton:hover {
+  background-color: #b30000;
+  transform: scale(1.05);
+}
+
+/* ANIMACIÓN */
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+}
+
+/* PÁGINAS INDIVIDUALES DE PELÍCULA */
+.pelicula-contenido {
+  max-width: 900px;
+  margin: 40px auto;
+  padding: 20px;
+  font-family: Arial, sans-serif;
+  background-color: #fff;
+}
+
+.pelicula-contenido img {
+  width: 100%;
+  height: auto;
+  margin-bottom: 20px;
+  border-radius: 8px;
+}
+
+.pelicula-contenido h1 {
+  font-size: 2em;
+  font-weight: bold;
+  border-bottom: 2px solid red;
+  padding-bottom: 10px;
+  margin-bottom: 20px;
+}
+
+.pelicula-contenido p {
+  font-size: 1.1em;
+  line-height: 1.6;
+  margin-bottom: 10px;
+}
+.inicio-body {
+  background-image: url("imagenes/fondo-inicio.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+#contacto-title {
+  scroll-margin-top: 140px;
+}
+.pelicula-contenido img {
+  margin: 20px 0;
+  width: 100%;
+  max-width: 100%;
+  border-radius: 8px;
+  height: auto;
+}
+
+.pelicula-contenido iframe {
+  margin-top: 30px;
+  border-radius: 8px;
+}
